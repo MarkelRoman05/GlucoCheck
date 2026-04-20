@@ -4,11 +4,44 @@
 
 - Objetivo: Crear una app web para diagnosticar el riesgo de diabetes con un modelo de ML.
 
+## Arranque rápido
+
+> Levanta todo el proyecto con un solo comando (entorno virtual, dependencias, pipeline y backend).
+
+### Mac / Linux
+
+```bash
+bash scripts/start.sh
+```
+
+### Windows
+
+```bat
+scripts\start.bat
+```
+
+### Con Make
+
+```bash
+make all
+```
+
+Otros comandos disponibles:
+
+```bash
+make install   # Crea el venv e instala dependencias
+make pipeline  # Ejecuta el pipeline de datos (descarga → preproceso → entrenamiento)
+make run       # Arranca el backend en http://localhost:8000
+make clean     # Elimina el venv y los artefactos generados
+```
+
+---
+
 ## Despliegue en producción
 - Frontend (Netlify): https://remarkable-fenglisu-735967.netlify.app
 - Backend (Railway): https://glucocheck-migue-production.up.railway.app
 
-## Instrucciones de ejecución local
+## Instrucciones de ejecución local (manual)
 1. Clonar el repositorio: git clone https://github.com/MarkelRoman05/GlucoCheck
 2. Crear entorno virtual: python -m venv venv
 3. Activar entorno virtual (Windows): venv\Scripts\activate
