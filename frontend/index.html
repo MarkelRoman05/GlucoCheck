@@ -1159,7 +1159,7 @@
         type: '',
         icon: '🔴',
         title: 'Servidor no disponible',
-        detail: 'No se pudo conectar con el backend en glucocheck-migue-production.up.railway.app. Comprueba que el servicio está activo.',
+        detail: 'No se pudo conectar con el backend en glucocheck-production.up.railway.app. Comprueba que el servicio está activo.',
       };
     }
 
@@ -1250,7 +1250,7 @@
     const timeoutId  = setTimeout(() => controller.abort(), 15000);
 
     try {
-      const res = await fetch('https://glucocheck-migue-production.up.railway.app/predict', {
+      const res = await fetch('https://glucocheck-production.up.railway.app/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
