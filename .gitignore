@@ -5,3 +5,7 @@ data/raw/*.csv
 data/processed/*.pkl
 data/processed/*.npy
 data/processed/*.txt
+# Excepciones: artefactos del modelo incluidos para despliegue directo
+!data/processed/model.pkl
+!data/processed/scaler.pkl
+!data/processed/threshold.txt
