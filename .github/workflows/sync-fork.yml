@@ -1,0 +1,23 @@
+name: Sync to GlucoCheck-v2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to GlucoCheck-v2
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.SYNC_TOKEN }}
+          repository: masmke/GlucoCheck-v2
+          branch: main
+          force: true
